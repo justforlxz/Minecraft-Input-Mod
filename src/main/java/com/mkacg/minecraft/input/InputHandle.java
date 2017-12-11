@@ -13,7 +13,9 @@ public class InputHandle {
     public void onKeyInput(InputEvent.KeyInputEvent event) {
         if (KeyBind.openGUI.isPressed()) {
             Dialog dialog = new Dialog();
-            Minecraft.getMinecraft().player.sendChatMessage(dialog.getString());
+            String value = dialog.getString();
+            Minecraft.getMinecraft().player.sendChatMessage(value);
+            System.out.println(value);
         }
     }
 }
