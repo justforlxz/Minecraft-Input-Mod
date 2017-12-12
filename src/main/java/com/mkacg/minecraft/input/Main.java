@@ -1,11 +1,12 @@
 package com.mkacg.minecraft.input;
 
-import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+
+import java.io.IOException;
 
 @Mod(modid = Main.MODID, version = Main.VERSION)
 public class Main {
@@ -14,10 +15,10 @@ public class Main {
 
     @SideOnly(Side.CLIENT)
     @EventHandler
-    public void init(FMLInitializationEvent event) {
+    public void init(FMLInitializationEvent event) throws IOException {
         System.out.println(String.format("I'm ready loaded! %s %s", MODID, VERSION));
 
-        MinecraftForge.EVENT_BUS.register(new InputHandle());
-        KeyBind.init();
+        UDP udp = new UDP();
+        udp.start();
     }
 }
