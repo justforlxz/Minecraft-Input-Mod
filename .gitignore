@@ -105,3 +105,10 @@ atlassian-ide-plugin.xml
 .gradletasknamecache
 
 /run
+
+debug
+release
+build*
+
+*.pro.user*
+*.qm
