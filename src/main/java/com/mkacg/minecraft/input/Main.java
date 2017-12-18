@@ -20,5 +20,8 @@ public class Main {
 
         UDP udp = new UDP();
         udp.start();
+
+//        KeyBindings.Register();
+//        MinecraftForge.EVENT_BUS.register(new KeyEventHandle());
     }
 }

@@ -3,7 +3,7 @@
   "modid": "mkacgInputMod",
   "name": "mkacgInputMod",
   "description": "Help you easy input chinese.",
-  "version": "${version}",
+  "version": "1.0",
   "mcversion": "${mcversion}",
   "url": "https://blog.mkacg.com/",
   "updateUrl": "https://github.com/kirigayakazusihn/MineCraft-Input-Mod",
